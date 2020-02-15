@@ -1,0 +1,31 @@
+# Написати програму, яка обчислює площу прямокутника, трикутника та кола (написати три функції для обчислення площі, 
+ # 	і викликати їх в головній програмі в залежності від вибору користувача)
+import math
+def func_1(x,y):
+    return(x*y)
+
+def func_2(m,w,f):
+	tr=m*w*f/2
+	return(tr)
+
+def func_3(c):
+	circ=math.pi*c**2
+	return(circ)
+  
+first_input=input("Please enter the figure(triangle, rectangle, circle): ")
+if first_input=="rectangle":
+	a=float(input("Print the first side: "))
+	b=float(input("Print the second side: "))
+	print ("The area of a rectangle is ", "%.2f" % func_1(a,b))
+
+elif first_input=="triangle":
+	first_triangle_side=float(input("Please enter the value of the first triangle side: "))
+	second_triangle_side=float(input("Please enter the value of the second triangle side: "))
+	third_triangl_side=float(input("Please enter the value of the third triangle side: "))
+	print("The area of the triangle is ", "%.2f" % func_2(first_triangle_side,second_triangle_side,third_triangl_side))
+
+elif first_input=="circle":
+	r=float(input("Please enter the radius of circle: "))
+	print ("The area of a circle is", "%.2f" % func_3(r))
+else:
+	print("Your input is invalide")
