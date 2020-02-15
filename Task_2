@@ -1,0 +1,6 @@
+# Написати функцію, яка повертає абсолютне значення числа
+
+def absolute (x):
+	return abs(x)
+
+print (absolute(-8))
